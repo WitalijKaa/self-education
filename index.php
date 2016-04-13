@@ -2,16 +2,28 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>PHP temp</title>
+    <title>THML title</title>
 </head>
 <body>
 <h1>экспериментальная страница</h1>
 
 
-<h4>аналог ООП в javaScript</h4>
+<h3>аналог ООП в javaScript</h3>
 <script src="./javaScript/jsOOP.js"></script>
 
-<h4>свойства Object</h4>
+<h3>свойства Object</h3>
 <script type="text/javascript" src="./javaScript/propsObject.js"></script>
+
+<h3>работа с document</h3>
+<script src="./javaScript/workDOM.js"></script>
+<span></span><p id="pEl">startText</p>
+<div id="divRadio">
+Да<input type="radio" name="answer" value="Да" />
+Нет<input type="radio" name="answer" value="Нет" />
+Не знаю<input type="radio" name="answer" value="Не знаю" />
+</div>
+<pre id="preEl"></pre>
+<div id="divForCreate"></div>
+
 </body>
 </html>
