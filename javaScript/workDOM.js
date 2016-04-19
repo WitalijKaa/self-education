@@ -13,7 +13,6 @@ window.onload = function () {
     pEl.previousSibling.innerText = '--- click dark magenta ----';
 
     pEl.setAttribute('someAttr', 'someAttrVal');
-    pEl.set
 
     pEl.onclick = function () {
         var i;
