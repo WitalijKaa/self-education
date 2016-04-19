@@ -25,5 +25,12 @@
 <pre id="preEl"></pre>
 <div id="divForCreate"></div>
 
+<h3>обработка событий</h3>
+<script src="./javaScript/events.js"></script>
+<div id="strContainer">
+    <input type="text">
+    <input type="text">
+</div>
+
 </body>
 </html>
