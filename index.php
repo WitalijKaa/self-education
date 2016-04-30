@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>THML title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.js"></script>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/blitzer/jquery-ui.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.js"></script>
     <script src="/javaScript/jQueryColorPlugin.js"></script>
     <script src="/javaScript/jQueryColorPluginExt.js"></script>
 </head>
 <body>
 <h1>экспериментальная страница</h1>
 
+<div id="accordion">
+    <div>
+        <h3>Section 1</h3>
+        <div>
+            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+        </div>
+    </div>
+    <div>
+        <h3>Section 2</h3>
+        <div>
+            <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+        </div>
+    </div>
+    <div>
+        <h3>Section 3</h3>
+        <div>
+            <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+            <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <h3>Section 4</h3>
+        <div>
+            <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+            <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<article style="display: none">
 <div>
 <span>
 <a href="http://edu.cbsystematics.com/video/ru">Видео обучение</a><br />
@@ -57,11 +98,27 @@
 </ul>
 
 <div id="animka" style="position: relative; width: 300px; height: 250px; border: 1px solid darkcyan; color: aliceblue"></div>
+</article>
 
 <script>
 
 $(function () {
 
+    $("#accordion")
+        .accordion({
+            icons:{
+                header: "ui-icon-circle-arrow-e",
+                activeHeader: "ui-icon-circle-arrow-s"
+            },
+            collapsible: true,
+            header: "> div > h3",
+            heightStyle: 'content'
+        }).sortable({
+        axis: "y",
+        handle: "h3"
+    });
+
+    /*
     $("a[href^='http://']").css("color", "red");    // Выбор всех элементов "a", с атрибутом "href", который начинается c "http://"
     $("a[href$='.com']").css("color", "blue");      // Выбор всех элементов "a", с атрибутом "href", который заканчивается на ".com"
     $("a[href*='html']").css("color", "green");     // Выбор всех элементов "a", с атрибутом "href", который содержит "html"
@@ -121,6 +178,8 @@ $(function () {
             })
             .animate({ left: "10px", top: "30px" }, 800);
     });
+
+    */
 });
 
 </script>
